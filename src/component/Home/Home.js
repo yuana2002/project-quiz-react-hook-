@@ -1,6 +1,6 @@
 
 // import { useEffect } from 'react';
-import Header from './Header';
+import Header from "../Header/Header";
 
 const Home = (props) => {
     // useEffect(() => {

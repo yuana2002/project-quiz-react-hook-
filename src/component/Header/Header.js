@@ -5,6 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const Header = (props) => {
     return (
+
         <>
             <Navbar expand="lg" className="bg-body-tertiary">
                 <Container>
@@ -22,7 +23,6 @@ const Header = (props) => {
                                 <NavDropdown.Item href="#action/3.1">Log in</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">Log out</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.3">Profile</NavDropdown.Item>
-
                             </NavDropdown>
                         </Nav>
                     </Navbar.Collapse>

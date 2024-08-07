@@ -4,12 +4,10 @@ import { connect } from "react-redux"
 import { useSelector, useDispatch } from 'react-redux';
 
 
-import Home from './component/Home';
+import Home from './component/Home/Home';
 
 const App = () => {
-
   return (
-
     <Home />
   );
 }
