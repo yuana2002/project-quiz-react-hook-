@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@media (min-width: 1200px) {
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1250px !important;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app-container {
+  .header-container {
+    .btn-login {
+      border-radius: 5px;
+      margin-right: 16px;
+      padding: 0 9px;
+      border: 1px solid;
+      height: 40px;
+    }
+
+    .btn-signup {
+      background-color: #9e5252;
+      border-radius: 8px;
+      border: 1px solid;
+      margin-right: 5px;
+      padding: 0 8px;
+      color: white;
+      height: 40px;
+
+      &:hover {
+        background-color: black;
+      }
+    }
+
+    .navbar {
+      z-index: 10;
+      background-color: rgba(0, 0, 0, 0) !important;
+      margin-top: 10px;
+
+      .nav-link {
+        &.active {
+          color: red;
+        }
+      }
+    }
+  }
+
+  .homepage-content {
+    position: relative;
+    padding: 80px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .title-1 {
+      font-size: 50px;
+      font-weight: 500;
+    }
+
+    .title-2 {
+      font-size: 35px;
+    }
+
+    .title-3 {
+      button {
+        font-size: 22px;
+        border-radius: 8px;
+        border: 1px solid;
+        margin-right: 5px;
+        padding: 0 16px;
+        height: 40px;
+
+        &:hover {
+          background-color: rgb(73, 61, 61);
+        }
+      }
+    }
+  }
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+video {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
 }

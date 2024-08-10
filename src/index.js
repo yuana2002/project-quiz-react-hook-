@@ -6,13 +6,38 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter } from 'react-router-dom';
+import {
+  BrowserRouter,
+  Route,
+  Routes
+} from 'react-router-dom';
+import Admin from './component/Admin/Admin';
+import User from './component/User/User';
+import HomePage from './component/Home/HomePage';
+import ManageUser from './component/Admin/content/ManageUser';
+import DashBoard from './component/Admin/content/DashBoard';
+import ManageQuestion from './component/Admin/content/ManageQuestion';
+import ManageQuiz from './component/Admin/content/ManageQuiz';
+
 
 ReactDOM.render(
   <Provider store={store}>
     {/* <React.StrictMode> */}
     <BrowserRouter>
-      <App />
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route index element={<HomePage />} />
+          <Route path="user" element={<User />} />
+        </Route>
+
+        <Route path="/admin" element={<Admin />}>
+          <Route index element={<DashBoard />} />
+          <Route path="manage-user" element={<ManageUser />} />
+          <Route path="manage-question" element={<ManageQuestion />} />
+          <Route path="manage-quiz" element={<ManageQuiz />} />
+        </Route>
+
+      </Routes>
     </BrowserRouter>
     {/* </React.StrictMode>, */}
   </Provider>,

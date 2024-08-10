@@ -1,0 +1,37 @@
+   .manage-user-container {
+       margin: 0 20px;
+   }
+
+   .modal-add-user {
+       .img-preview {
+           height: 150px;
+           border: 1px dashed grey;
+           border-radius: 7px;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           color: grey;
+
+           img {
+               max-width: 100%;
+               max-height: 100%;
+           }
+       }
+
+       .label-update {
+           display: flex;
+           align-items: center;
+           gap: 4px;
+           border-radius: 9px;
+           width: fit-content;
+           padding: 5px 12px;
+           background-color: rgb(243, 227, 227);
+           cursor: pointer;
+
+           &:hover {
+               background-color: rgb(228, 237, 237);
+           }
+       }
+
+
+   }
